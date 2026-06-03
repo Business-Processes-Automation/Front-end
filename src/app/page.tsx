@@ -1,11 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-    return (
-        <>
-            <Button variant="outline" size="lg">
-                Hello World
-            </Button>
-        </>
-    );
+export default function HomePage() {
+    redirect("/calendar");
 }
