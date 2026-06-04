@@ -1,5 +1,6 @@
 "use client";
 
+import { DashboardHeader } from "./dashboard-header";
 import { DashboardNav } from "./dashboard-nav";
 import { cn } from "@/shared/lib/utils";
 import { useAppSelector } from "@/shared/store";
@@ -22,11 +23,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <DashboardNav />
             </aside>
             <div className="flex min-w-0 flex-1 flex-col">
-                <header className="flex h-14 items-center border-b bg-card px-6">
-                    <p className="text-sm text-muted-foreground">
-                        Панель керування
-                    </p>
-                </header>
+                <DashboardHeader />
                 <main className="flex-1 bg-background p-6">{children}</main>
             </div>
         </div>
