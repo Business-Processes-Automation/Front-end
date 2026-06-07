@@ -1,3 +1,4 @@
+import { AuthGuard, AuthSessionLoader } from "@/features/auth";
 import { DashboardLayout } from "@/widgets/app-shell";
 
 export default function DashboardRouteLayout({
@@ -5,5 +6,11 @@ export default function DashboardRouteLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <DashboardLayout>{children}</DashboardLayout>;
+    return (
+        <AuthSessionLoader>
+            <AuthGuard>
+                <DashboardLayout>{children}</DashboardLayout>
+            </AuthGuard>
+        </AuthSessionLoader>
+    );
 }

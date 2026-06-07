@@ -1,11 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+import { authSlice } from "@/features/auth/model";
+
 import { appSlice } from "./app-slice";
 
 export const makeStore = () =>
     configureStore({
         reducer: {
             app: appSlice.reducer,
+            auth: authSlice.reducer,
         },
         devTools: process.env.NODE_ENV !== "production",
     });
