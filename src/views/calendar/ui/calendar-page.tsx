@@ -1,10 +1,5 @@
-import { PageStub } from "@/shared/ui/page-stub";
+import { CalendarPageContent } from "./calendar-page-content";
 
 export function CalendarPage() {
-    return (
-        <PageStub
-            title="Календар"
-            description="Тут буде інтерактивний календар записів (FullCalendar)."
-        />
-    );
+    return <CalendarPageContent />;
 }

@@ -14,6 +14,9 @@ type FormFieldProps = {
     placeholder?: string;
     autoComplete?: string;
     disabled?: boolean;
+    step?: string | number;
+    min?: string | number;
+    max?: string | number;
 };
 
 export function FormField({
@@ -23,6 +26,9 @@ export function FormField({
     placeholder,
     autoComplete,
     disabled,
+    step,
+    min,
+    max,
 }: FormFieldProps) {
     const [field, meta] = useField(name);
     const hasError = meta.touched && Boolean(meta.error);
@@ -39,6 +45,9 @@ export function FormField({
                 placeholder={placeholder}
                 autoComplete={autoComplete}
                 disabled={disabled}
+                step={step}
+                min={min}
+                max={max}
                 aria-invalid={hasError}
                 className={cn(
                     inputClassName,

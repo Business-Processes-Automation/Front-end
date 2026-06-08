@@ -1,0 +1,89 @@
+.schedule-fullcalendar .fc {
+    --fc-border-color: var(--border);
+    --fc-page-bg-color: var(--card);
+    --fc-neutral-bg-color: var(--muted);
+    --fc-neutral-text-color: var(--muted-foreground);
+    --fc-button-bg-color: var(--secondary);
+    --fc-button-border-color: var(--border);
+    --fc-button-text-color: var(--secondary-foreground);
+    --fc-button-hover-bg-color: var(--accent);
+    --fc-button-hover-border-color: var(--border);
+    --fc-button-active-bg-color: var(--primary);
+    --fc-button-active-border-color: var(--primary);
+    --fc-button-active-text-color: var(--primary-foreground);
+    --fc-today-bg-color: color-mix(in oklch, var(--primary) 10%, transparent);
+    --fc-event-border-color: transparent;
+    --fc-now-indicator-color: var(--destructive);
+}
+
+.schedule-fullcalendar .fc .fc-toolbar-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.schedule-fullcalendar .fc .fc-button {
+    border-radius: var(--radius-md);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+    text-transform: none;
+    box-shadow: none;
+}
+
+.schedule-fullcalendar .fc .fc-col-header-cell-cushion,
+.schedule-fullcalendar .fc .fc-timegrid-slot-label-cushion,
+.schedule-fullcalendar .fc .fc-daygrid-day-number {
+    color: var(--muted-foreground);
+    font-size: 0.75rem;
+}
+
+.schedule-fullcalendar .fc .fc-event {
+    border-radius: calc(var(--radius-md) * 0.75);
+    border-width: 0 0 0 3px;
+    font-size: 0.75rem;
+    padding: 1px 4px;
+}
+
+.schedule-fullcalendar .fc .fc-event-status-planned {
+    background-color: color-mix(in oklch, #3b82f6 18%, var(--card));
+    border-left-color: #3b82f6;
+    color: var(--foreground);
+}
+
+.schedule-fullcalendar .fc .fc-event-status-completed {
+    background-color: color-mix(in oklch, #22c55e 18%, var(--card));
+    border-left-color: #22c55e;
+    color: var(--foreground);
+}
+
+.schedule-fullcalendar .fc .fc-event-status-cancelled {
+    background-color: color-mix(in oklch, var(--muted-foreground) 14%, var(--card));
+    border-left-color: var(--muted-foreground);
+    color: var(--muted-foreground);
+    text-decoration: line-through;
+}
+
+.schedule-fullcalendar .fc .fc-event-status-rescheduled {
+    background-color: color-mix(in oklch, #f59e0b 18%, var(--card));
+    border-left-color: #f59e0b;
+    color: var(--foreground);
+}
+
+.schedule-fullcalendar .fc .fc-event-status-noshow {
+    background-color: color-mix(in oklch, var(--destructive) 16%, var(--card));
+    border-left-color: var(--destructive);
+    color: var(--foreground);
+}
+
+.schedule-fullcalendar .fc .fc-event-timeoff {
+    background-color: color-mix(in oklch, var(--muted-foreground) 10%, transparent);
+    opacity: 1;
+}
+
+.schedule-fullcalendar .fc .fc-timegrid-event .fc-event-main {
+    padding: 2px 4px;
+}
+
+.schedule-fullcalendar .fc .fc-non-business {
+    background-color: color-mix(in oklch, var(--muted) 65%, transparent);
+}
